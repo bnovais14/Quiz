@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="quizcss.css">
+    <title>TECHQUIZ</title>
+    <script>
+    
+    function reset(){
+    location.reload();
+}
+        function valida(){
+        // VALIDAÇÃO 
+        while((p1.r1[0].checked == false )&&
+        (p1.r1[1].checked == false )&&
+        (p1.r1[2].checked == false )){
+            alert('Pergunta 1 -Selecione pelo menos uma pergunta');
+            break;
+        }
+             while((p2.r2[0].checked == false )&&
+        (p2.r2[1].checked == false )&&
+        (p2.r2[2].checked == false )){
+            alert('Pergunta 2 - Selecione pelo menos uma resposta');
+            break;
+        }
+             while((p3.r3[0].checked == false )&&
+        (p3.r3[1].checked == false )&&
+        (p3.r3[2].checked == false )){
+            alert('Pergunta 3 - Selecione pelo menos uma resposta');
+            break;
+        }
+         while((p4.r4[0].checked == false )&&
+        (p4.r4[1].checked == false )&&
+        (p4.r4[2].checked == false )){
+            alert('Pergunta 4 - Selecione pelo menos uma resposta');
+            break;
+        }
+         while((p5.r5[0].checked == false )&&
+        (p5.r5[1].checked == false )&&
+        (p5.r5[2].checked == false )){
+            alert('Pergunta 5 - Selecione pelo menos uma resposta');
+            break;
+        }
+       
+        } 
+         //QUESTAO1
+         function respostas(){
+             var ct = 0;
+            if((p1.r1[0].checked == true )){
+               alert("Pergunta 1 - Resposta certa");
+                ct+=1;
+               }
+        else{
+                alert("Pergunta 1 - Resposta errada");
+               }
+        
+        
+        //QUESTAO2
+          if((p2.r2[2].checked == true )){
+               alert("Pergunta 2 - Resposta certa");
+              ct+=1;
+               }
+        else{
+                alert("Pergunta 2 - Resposta errada");
+               }
+         
+        
+        //QUESTAO3
+         if((p3.r3[1].checked == true )){
+               alert("Pergunta 3 - Resposta certa");
+              ct+=1;;
+               }
+        else{
+                alert("Pergunta 3 - Resposta errada");
+               }
+        
+            //QUESTAO4
+         if((p4.r4[0].checked == true )){
+               alert("Pergunta 4 - Resposta certa");
+             ct+=1;
+               }
+        else{
+                alert("Pergunta 4 - Resposta errada");
+               }
+        
+           //QUESTAO5
+         if((p5.r5[2].checked == true )){
+               alert("Pergunta 5 - Resposta certa");
+             ct+=1;
+               }
+        else{
+                alert("Pergunta 5 - Resposta errada");
+               }
+             alert("Você acertou " + ct  + " de 5 questões")
+             
+             var dec = String(prompt("Deseja o gabarito? Digite S para sim ou N para não "));
+             if ((dec == "s") || (dec == "S")){
+                 alert("1 - A /// 2 - C ///  3 - B ///  4 - A /// 5 - C")
+                 alert("Obrigada por participar do TECHQUIZ")
+             }
+             
+             else{
+             alert("Tente o quiz novamente, Boa Sorte")
+             }
+         }
+        
+        
+       
+     
+    </script>
+</head>
+
+<body id="body">
+     <!-- CABEÇALHO -->
+    <div id="lista">
+        <h1 id="tt1">
+            <center class="fonte1">TECH<center id="part">QUIZ</center></center>
+        </h1>
+        <p></p>
+    </div>
+    <script>
+       var nome = String(prompt("Digite o seu nome:"))
+       while (nome == ""){
+           alert("Digite no espaço em braco o seu nome " );
+           var nome = String(prompt("Digite o seu nome:"))
+       }
+         alert("Seja bem vindo " + nome + " aqui você irá testar seu conhecimentos gerais na área da tecnologia");
+         alert("Clique em Validar primeiro, caso não apareça nenhuma mensagem depois clique em Gabarito após a conclusão do quiz");
+    </script>
+   
+     <!-- PERGUNTAS -->
+      <form id ="p1">
+    <div >
+        <br>
+        <h2 class="perguntas">1 - Quem são Siri, Cortana utilizadas por grandes empresas da tecnologia?</h2>
+        <div class = "resp">
+          <input type="radio" name="r1" class="tipo" value="a" class="fonte"><strong>A.</strong> Sistemas de Inteligencia Artificial<br>
+          <input type="radio" name="r1" class="tipo" value="b" class="fonte"><strong>B.</strong> Marca de carro<br>
+
+        <input type="radio" name="r1" class="tipo" value="c" class="fonte"><strong>C.</strong> Aplicativos<br>
+        </div>
+</div>
+     </form>
+   
+    
+    <br><br>
+    <form id="p2">
+
+    <div >
+        <br>
+        <h2 class="perguntas">2 - Todos abaixo são parte de algum tipo de grupo de hackers, exceto:</h2>
+       
+        <div class = "resp">
+        <input type="radio" name="r2" class="tipo" value="a"><strong >A.</strong>white hats<br>
+        
+        <input type="radio" name="r2" class="tipo" value="b" class="fonte"><strong >B.</strong> Hacktivista<br>
+        
+        <input type="radio" name="r2" class="tipo" value="c" class="fonte"><strong >C.</strong> Red hats<br>
+        </div>
+    </div>
+    </form>
+    
+    <br><br>
+  
+    <form id="p3">
+    <div >
+        <br>
+        <h2 class="perguntas">3 - O que é o sinônimo de IF na programação ?</h2>
+        <div class = "resp">
+
+        <input type="radio" name="r3" class="tipo" value="a" class="fonte"><strong >A.</strong> Um laço<br>
+        
+        <input type="radio" name="r3" class="tipo" value="b" class="fonte"><strong >B.</strong> Uma condição<br>
+        
+        <input type="radio" name="r3" class="tipo" value="c" class="fonte"><strong >C.</strong> Uma classe<br>
+        </div>
+    </div>
+    </form>
+    <br><br>
+   <form id="p4">
+    <div >
+        <br>
+        <h2 class="perguntas"> 4 - O que significa a sigla “www” na internet?</h2>
+        
+     <div class = "resp">
+        <input type="radio" name="r4" class="tipo" value="a"><strong >A. </strong>Word wide web<br>
+        
+        <input type="radio" name="r4" class="tipo" value="b"><strong >B.</strong> Web world wide<br>
+        
+        <input type="radio" name="r4" class="tipo" value="c"><strong >C.</strong> Web wide world<br>
+        </div>
+</div>
+    </form>
+    <br><br>
+   <form id="p5">
+    <div >
+        <br>
+        <h2 class="perguntas">5 - Quantos bits cabem em um byte?</h2>
+        
+ <div class = "resp">
+        <input type="radio" name="r5" class="tipo" value="a"><strong >A. </strong>16 bits<br>
+        
+        <input type="radio" name="r5" class="tipo" value="b"><strong >B. </strong>12 bits<br> 
+        
+        <input type="radio" name="r5" class="tipo" value="c"><strong c>C.</strong> 8 bits<br>
+        </div>
+    </div>
+    </form>
+    <br><br>
+    
+
+    <br>
+    <br>
+    <!-- BOTÕES -->
+    <button class="enviar"  onClick="valida()"  >Validar</button>
+    <button class="enviar" onClick="respostas()"  >Gabarito</button>
+    <button class="enviar" onClick="reset()">Recomeçar</button>
+    
+    <!-- AQUI ESTA O FOOTER -->
+    <footer id="footer">
+        
+        <center><h3 class="foot">Ana Beatriz & Beatriz Novais </h3></center>
+        <center><h3 class="foot">Turma: 2F</h3></center>
+    </footer>
+
+
+</body>
+
+</html>
